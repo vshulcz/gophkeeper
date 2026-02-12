@@ -1,0 +1,36 @@
+# Binaries
+/bin/
+/client
+/server
+/tui
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test output
+*.test
+*.out
+cover.out
+coverage.*
+
+# Build artifacts
+/dist/
+/build/
+
+# OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Local config
+.env
+.env.*
+
+# Client store
+store.json
+gophkeeper.db
+*.db
+*.sqlite
+*.sqlite3

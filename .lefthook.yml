@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    fmt:
+      run: gofmt -w cmd internal
+    lint:
+      run: golangci-lint run
+    test:
+      run: go test ./...
