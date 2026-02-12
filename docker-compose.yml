@@ -1,0 +1,19 @@
+services:
+  gophkeeper:
+    build:
+      context: .
+      args:
+        VERSION: dev
+        BUILD_DATE: "unknown"
+    ports:
+      - "8080:8080"
+    environment:
+      GOPHKEEPER_ADDR: ":8080"
+      GOPHKEEPER_DB: "file:/data/gophkeeper.db?_pragma=busy_timeout(5000)"
+      GOPHKEEPER_TOKEN_SECRET: "change-me"
+      GOPHKEEPER_TOKEN_TTL: "24h"
+    volumes:
+      - gophkeeper-data:/data
+
+volumes:
+  gophkeeper-data:
